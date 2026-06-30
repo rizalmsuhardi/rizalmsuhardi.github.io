@@ -426,3 +426,41 @@
 </script>
 </body>
 </html>
+<section id="visitors" class="alt">
+  <div class="label">Visitor Statistics</div>
+  <h2>Global reach</h2>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;margin-top:12px">
+    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-total">—</div>
+      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Total</div>
+    </div>
+    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-today">—</div>
+      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Today</div>
+    </div>
+    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
+      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-countries">—</div>
+      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Countries</div>
+    </div>
+  </div>
+  <a href="https://info.flagcounter.com/c8bX" target="_blank" rel="noopener">
+    <img src="https://s01.flagcounter.com/count2/c8bX/bg_1c2b1e/txt_7fc47f/border_2b3c2b/columns_4/maxflags_40/viewers_1/labels_1/pageviews_1/flags_1/percent_0/" alt="Flag Counter" border="0" style="border-radius:10px;max-width:100%">
+  </a>
+  <script>
+  (function() {
+    var key = 'rzl_visit';
+    var today = new Date().toDateString();
+    var data;
+    try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch(e) { data = {}; }
+    data.total = (data.total || 0) + 1;
+    if (data.date !== today) { data.date = today; data.today = 0; }
+    data.today = (data.today || 0) + 1;
+    data.countries = data.countries || 1;
+    try { localStorage.setItem(key, JSON.stringify(data)); } catch(e) {}
+    function fmt(n) { return n >= 1000 ? (n/1000).toFixed(1)+'k' : n; }
+    document.getElementById('stat-total').textContent = fmt(data.total);
+    document.getElementById('stat-today').textContent = data.today;
+    document.getElementById('stat-countries').textContent = data.countries;
+  })();
+  </script>
+</section>
