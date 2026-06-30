@@ -409,15 +409,7 @@
         </a>
       </div>
     </div>
-  </section>
-
-  <footer>
-    &copy; <span id="yr"></span> Rizal M. Suhardi  &middot;  Learn+Research (ER) Ganbatte Kudasai
-  </footer>
-
-</div>
-
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+  <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
@@ -427,21 +419,20 @@
 </body>
 </html>
 <section id="visitors" class="alt">
-  <div class="label">Visitor Statistics</div>
-  <h2>Global reach</h2>
-  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;margin-top:12px">
-    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
-      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-total">—</div>
-      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Total</div>
-    </div>
-    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
-      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-today">—</div>
-      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Today</div>
-    </div>
-    <div style="flex:1;min-width:100px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center">
-      <div style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--moss)" id="stat-countries">—</div>
-      <div style="font-family:'Fraunces',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px">Countries</div>
-    </div>
+  <!-- Stats summary boxes -->
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;margin-top:12px;max-width:420px">
+  <div style="flex:1;min-width:70px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center">
+    <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--moss)" id="stat-total">—</div>
+    <div style="font-family:'Fraunces',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:3px">Total</div>
+  </div>
+  <div style="flex:1;min-width:70px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center">
+    <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--moss)" id="stat-today">—</div>
+    <div style="font-family:'Fraunces',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:3px">Today</div>
+  </div>
+  <div style="flex:1;min-width:70px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center">
+    <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--moss)" id="stat-countries">—</div>
+    <div style="font-family:'Fraunces',serif;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:3px">Countries</div>
+  </div>
   </div>
   <a href="https://info.flagcounter.com/c8bX" target="_blank" rel="noopener">
     <img src="https://s01.flagcounter.com/count2/c8bX/bg_1c2b1e/txt_7fc47f/border_2b3c2b/columns_4/maxflags_40/viewers_1/labels_1/pageviews_1/flags_1/percent_0/" alt="Flag Counter" border="0" style="border-radius:10px;max-width:100%">
@@ -464,3 +455,10 @@
   })();
   </script>
 </section>
+    </section>
+
+  <footer>
+    &copy; <span id="yr"></span> Rizal M. Suhardi  &middot;  Learn+Research (ER) Ganbatte Kudasai
+  </footer>
+
+</div>
