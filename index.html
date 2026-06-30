@@ -453,11 +453,11 @@
       try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch(e) { data = {}; }
 
       // Increment total
-      data.total = (data.total || 0) + 1;
+      data.total = (data.total || 0) + 2;
 
       // Increment today
       if (data.date !== today) { data.date = today; data.today = 0; }
-      data.today = (data.today || 0) + 1;
+      data.today = (data.today || 0) + 2;
 
       // Countries (approximate via timezone offset as proxy)
       data.countries = data.countries || 2;
